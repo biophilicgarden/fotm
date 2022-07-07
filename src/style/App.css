@@ -1,0 +1,368 @@
+.App {
+  text-align: center;
+}
+
+.scene_container {
+  margin: 20px auto;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#scanning-ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: -1;
+}
+
+/* Screen is wider than tall */
+@media (min-aspect-ratio: 1/1) {
+  #scanning-ui .inner {
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+/* Screen is taller than wide */
+@media (max-aspect-ratio: 1/1) {
+  #scanning-ui .inner {
+    width: 75vw;
+    height: 75vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #info-panel-container .info-panel {
+    width: 80vw;
+    height: 60vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #info-panel-container .info-panel {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #info-panel-container .info-panel {
+    width: 40vw;  
+    height: 40vw;
+  }
+}
+
+#scanning-ui .inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background:
+    linear-gradient(to right, white 10px, transparent 10px) 0 0,
+    linear-gradient(to right, white 10px, transparent 10px) 0 100%,
+    linear-gradient(to left, white 10px, transparent 10px) 100% 0,
+    linear-gradient(to left, white 10px, transparent 10px) 100% 100%,
+    linear-gradient(to bottom, white 10px, transparent 10px) 0 0,
+    linear-gradient(to bottom, white 10px, transparent 10px) 100% 0,
+    linear-gradient(to top, white 10px, transparent 10px) 0 100%,
+    linear-gradient(to top, white 10px, transparent 10px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+#scanning-ui img {
+  opacity: 0.6;
+  width: 90%;
+  align-self: center;
+}
+
+#scanning-ui .inner .scanline {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: white;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0%, 100% { top: 0% }
+  50% { top: calc(100% - 10px) }
+}
+
+#scanning-ui.hidden {
+  display: none;
+}
+
+.btn_bottom_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  row-gap: 5px;
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 2em;
+  max-width: 500px;
+}
+
+.center-child {
+  display: flex;
+  justify-content: center;
+}
+
+#scanning-message {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.button {
+  background: transparent;
+  background-repeat: no-repeat;
+  float:left;
+  height: 70px;
+  width: 70px;		
+  border: 3px;
+  border-style: solid;
+  border-color: white;
+  margin: 0 30px 30px 0;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.btn_bottom_child {
+  margin: 0 auto;
+}
+
+.button:active {
+	transform: scale(1.1);
+	transition: .1s;
+}
+
+.btnSVG {
+  max-width: 45px;
+  max-height: 45px;
+}
+
+.btnSVG:first-child {
+  fill: #FFF;
+  width: auto;
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+
+#info-panel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 3;
+}
+
+.info-panel {
+  /* background-color: white; */
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  border-radius: 30px;
+  border: 3px solid white;
+  background: rgba(255,255,255,0.8);
+  /* outline: 3px solid white;
+  outline-offset: 10px; */
+}
+
+.info-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.info-title-container {
+  display: grid;
+  grid-template-columns: 0.15fr 0.85fr;
+  row-gap: 0px;
+  column-gap: 15px;
+}
+
+.info-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.info-panel-icon {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.info-title-text-container {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.info-title {
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 2px;
+}
+
+/* TODO: should check the display of this on a few devices, the CSS is a bit hacky
+   Alternative is to add the latin name to the actual title, put both in spans and restyle */
+.latin-name {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  font-style: italic;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.info-text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#reflectionBtn {
+  height: 10%;
+  width: 75%;
+  border-radius: 30px;
+  border: transparent;
+  font-weight: 700;
+  background-color: rgba(96, 198, 125, 0.9);
+  margin: 0 auto;
+  margin-bottom: 5%;
+  display: inline-flex;
+  justify-content: center; /* center the content horizontally */
+  align-items: center; /* center the content vertically */
+}
+
+#reflectionBtn span {
+  /* color: #238e55; */
+  color: #FFF;
+}
+
+#reflection-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 3;
+}
+
+.reflection-panel {
+  /* background-color: white; */
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  border-radius: 5%;
+  width: 80vw;
+}
+
+.reflection-content {
+  display: inline-block;
+  padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TODO: Style the reflections */
+.reflection-text {
+
+}
+
+.mainPanel {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainPanelContent {
+  padding: 30px;
+}
+
+.mainPanelTitle {
+  font-size: 25px;
+  color: #FFF;
+}
+
+.mainPanelText {
+  line-height: 1.6;
+  color: #FFF;
+}
+
+.mainPanelText > ul {
+  list-style: none;
+}
+
+.AppInfoContainer {
+  background: linear-gradient(to bottom right, #00BFAD, #99A3D4);
+  /* background: linear-gradient(to bottom right, #69b7eb, #f4d6db); */
+  height: 100vh;
+}
+
+.BiophiliaInfoContainer {
+  /* background-image: linear-gradient(to bottom right, #8DD9E9, #85F4BA); */
+  background: linear-gradient(to bottom right,#047c84 ,#006a5c, #02ab82, #61bf9a);
+  height: 100vh;
+}
+
+.TeamInfoContainer {
+  background: linear-gradient(to bottom right, #f598a8, #f6edb2);
+  height: 100vh;
+}
+
+.main-panel-back-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}

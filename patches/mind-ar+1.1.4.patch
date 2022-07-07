@@ -1,0 +1,53 @@
+diff --git a/node_modules/mind-ar/src/image-target/aframe.js b/node_modules/mind-ar/src/image-target/aframe.js
+index df6ecb2..bf7b112 100644
+--- a/node_modules/mind-ar/src/image-target/aframe.js
++++ b/node_modules/mind-ar/src/image-target/aframe.js
+@@ -122,7 +122,7 @@ AFRAME.registerSystem('mindar-image-system', {
+ 
+ 	  for (let i = 0; i < this.anchorEntities.length; i++) {
+ 	    if (this.anchorEntities[i].targetIndex === targetIndex) {
+-	      this.anchorEntities[i].el.updateWorldMatrix(worldMatrix, );
++	      this.anchorEntities[i].el.updateWorldMatrix(worldMatrix, this.anchorEntities[i].targetIndex);
+ 	      if (worldMatrix) {
+ 		this.ui.hideScanning();
+ 	      }
+@@ -152,6 +152,7 @@ AFRAME.registerSystem('mindar-image-system', {
+     this.controller.processVideo(this.video);
+   },
+ 
++
+   _resize: function() {
+     const video = this.video;
+     const container = this.container;
+@@ -208,6 +209,7 @@ AFRAME.registerComponent('mindar-image', {
+     uiError: {type: 'string', default: 'yes'},
+   },
+ 
++
+   init: function() {
+     const arSystem = this.el.sceneEl.systems['mindar-image-system'];
+ 
+@@ -262,9 +264,10 @@ AFRAME.registerComponent('mindar-image-target', {
+     this.postMatrix.compose(position, quaternion, scale);
+   },
+ 
+-  updateWorldMatrix(worldMatrix) {
++  updateWorldMatrix(worldMatrix, foundTarget) {
+     if (!this.el.object3D.visible && worldMatrix !== null) {
+-      this.el.emit("targetFound");
++      this.foundTarget = foundTarget;
++      this.el.emit("targetFound", {foundTarget});
+     } else if (this.el.object3D.visible && worldMatrix === null) {
+       this.el.emit("targetLost");
+     }
+diff --git a/node_modules/mind-ar/webpack.config.dev.cjs b/node_modules/mind-ar/webpack.config.dev.cjs
+index 26bc9c9..06c0962 100644
+--- a/node_modules/mind-ar/webpack.config.dev.cjs
++++ b/node_modules/mind-ar/webpack.config.dev.cjs
+@@ -48,5 +48,5 @@ module.exports = {
+       path: false,
+       crypto: false
+     }
+-  }
++  },
+ };
