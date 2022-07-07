@@ -7,7 +7,7 @@ export default function AppInfo({ setMainPanel }) {
     return (
         <div className="mainPanel AppInfoContainer">
             <div className="mainPanelContent">
-                <span className="mainPanelTitle">Welcome to the Biophilic Garden!</span>
+                <span className="mainPanelTitle">The Biophilic Garden</span>
                 <div className="mainPanelText">
                     <p>There are six focal plants dotted around the installation you can interact with via this Augmented Reality app.</p>
                     <p>To trigger the interaction, point your device at the image displayed next to the plant.</p>
