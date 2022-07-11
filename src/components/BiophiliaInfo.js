@@ -14,7 +14,7 @@ export default function BiophiliaInfo({ setMainPanel }) {
                     <p>The installation contains two areas representing a 'Woodland' and 'Mountain' archetype, containing plants typically associated with those habitats. These include tactile and fragrant plants that humans have adopted for sensory, medicinal or spiritual purposes. The planting is augmented through use of QR codes and image markers which visitors can use to trigger additional information via their own mobile phones.</p>
                 </div>    
                 <div className="center-child">
-                    <div className='btn_bottom_container main-panel-back-btn'>
+                    <div className='btn-bottom-container main-panel-back-btn'>
                         <BtnBottom 
                             key={'back_btn'}
                             icon_type={'back_btn'}

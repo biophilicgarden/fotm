@@ -16,7 +16,7 @@ export default function AppInfo({ setMainPanel }) {
                     <p>From here, click the button at the bottom of the panel and you will be receive a prompt enabling you to reflect on a certain aspect of your relationship with nature.</p>
                 </div>
                 <div className="center-child">
-                    <div className='btn_bottom_container main-panel-back-btn'>
+                    <div className='btn-bottom-container main-panel-back-btn'>
                     <BtnBottom 
                         key={'back_btn'}
                         icon_type={'back_btn'}

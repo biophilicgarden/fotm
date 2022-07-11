@@ -37,7 +37,7 @@ export default function TeamInfo({ setMainPanel }) {
                 
                 </div>
                 <div className="center-child">
-                    <div className='btn_bottom_container main-panel-back-btn'>
+                    <div className='btn-bottom-container main-panel-back-btn'>
                         <BtnBottom
                             key={'back_btn'}
                             icon_type={'back_btn'}
