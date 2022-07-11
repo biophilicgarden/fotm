@@ -25,7 +25,6 @@
 
 /* Screen is wider than tall */
 @media (min-aspect-ratio: 1/1) {
-
   #scanning-ui .inner {
     width: 30vh;
     height: 30vh;
@@ -294,28 +293,29 @@
   z-index: 3;
 }
 
-.reflection-panel {
-  /* background-color: white; */
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  border-radius: 50%;
-  width: 80vw;
-  max-width: 500px;
-}
-
-.reflection-content {
-  display: inline-block;
-  padding: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 /* TODO: Style the reflections */
 .reflection-text {
-
+  width: 50vw;
+  max-width: 400px;
+  background: rgba(255,255,255,0.8);
+  border: 10px solid #FFF;
+  padding: 50px 30px;
+  border-radius: 50%;
 }
+
+/* .reflection-text::before {
+  content: "";
+    position: absolute;
+    z-index: 10;
+    bottom: 33vh;
+    right: 25vw;
+    width: 40px;
+    height: 40px;
+    border: 10px solid #FFF;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50px;
+    display: block;
+} */
 
 .mainPanel {
   text-align: center;
@@ -326,6 +326,8 @@
   padding: 30px;
   max-width: 500px;
   margin: 0 auto;
+  overflow: none;
+  max-height: 75vh;
 }
 
 .mainPanelTitle {
@@ -334,7 +336,7 @@
 }
 
 .mainPanelText {
-  line-height: 1;
+  line-height: 1.1;
   color: #FFF;
 }
 
@@ -344,19 +346,20 @@
 
 .AppInfoContainer {
   background: linear-gradient(to bottom right, #00BFAD, #99A3D4);
-  /* background: linear-gradient(to bottom right, #69b7eb, #f4d6db); */
+  /* background: darkcyan; */
   height: 100vh;
 }
 
 .BiophiliaInfoContainer {
-  /* background-image: linear-gradient(to bottom right, #8DD9E9, #85F4BA); */
   background: linear-gradient(to bottom right,#047c84 ,#006a5c, #02ab82, #61bf9a);
+  /* background: linear-gradient(to bottom right, #00BFAD, #99A3D4); */
   height: 100vh;
 }
 
 .TeamInfoContainer {
   background: linear-gradient(to bottom right, #d47b8a, #f6edb2);
-  height: 100vh;
+  /* background: rgb(255,134,207); */
+  height: 100vh; 
 }
 
 .main-panel-back-btn {

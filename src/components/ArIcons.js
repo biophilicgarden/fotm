@@ -130,6 +130,6 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     : reflection ? <ReflectionPanel reflectionText={plantData[targetIndex][8]} removeReflection={removeReflection}/>
     
     // fallback solution in case some weird state is encountered
-    : <div>{setIconUIShow(true)}</div>
+    : setIconUIShow(true)
   );
 }

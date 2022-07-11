@@ -11,10 +11,8 @@ export default function ReflectionPanel({reflectionText, removeReflection}) {
 
     return (        
         <div id="reflection-container">
-            <div className="reflection-panel">
-                <div className="reflection-content" onClick={removeReflection}>
-                    <div className="reflection-text">{reflectionText}</div>
-                </div>
+            <div className="reflection-content" onClick={removeReflection}>
+                <blockquote className="reflection-text"><p>{reflectionText}</p></blockquote>
             </div>
         </div> 
     );

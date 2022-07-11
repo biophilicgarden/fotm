@@ -9,7 +9,7 @@ import SmileModel from '../assets/models/face_turq.glb'
 import ThumbsModel from '../assets/models/thumbs_turq.glb'
 import HandModel from '../assets/models/hand_turq.glb'
 
-// compiled target file with naming convention: targets_{num}_{scale}.mind
+// compiled target file
 const target = 'targets_6_s1.mind';
 
 function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow }) {

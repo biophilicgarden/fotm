@@ -9,21 +9,9 @@ export default function BiophiliaInfo({ setMainPanel }) {
             <div className="mainPanelContent">
                 <span className="mainPanelTitle">Biophilia</span>
                 <div className="mainPanelText">
-                    <p className="quote">An innate and genetically determined affinity of human beings with the natural world.<br></br>-- Edward O Wilson</p>
-                    <p>Whatever our relationship with
-                    nature is, we can get closer.
-                    We can notice more, listen more,
-                    feel more, enjoy more, and care more.</p>
-
-                    <p>The 'Biophilic Garden' is an installation which enables
-                    visitors to reflect on their own relationship to the natural world, and asks what nourishes
-                    them and allows them to thrive in the physical, social, psychological and spiritual dimensions
-                    of their lives.</p>
-                    
-                    <p>Some more text.</p>
-                    <p>Some more text.</p>
-                    <p>Some more text.</p>
-                    <p>That's enough text now.</p>
+                    <p>Biophilia ('Bio' = living beings, 'philia' = Love for) is an ancient phenomenon going back to our time as Hunter-Gatherers, but only recently defined by Harvard biologist E. O. Wilson, as an 'Innate and genetically determined affinity of human beings with the natural world' (1984).</p>
+                    <p>The 'Biophilic Garden' is an installation in a public space which demonstrates these principles and enables visitors to reflect on their own relationship to the natural world, via 5 pathways to nature connection - senses, beauty, emotion, meaning and compassion.</p>
+                    <p>The installation contains two areas representing a 'Woodland' and 'Mountain' archetype, containing plants typically associated with those habitats. These include tactile and fragrant plants that humans have adopted for sensory, medicinal or spiritual purposes. The planting is augmented through use of QR codes and image markers which visitors can use to trigger additional information via their own mobile phones.</p>
                 </div>    
                 <div className="center-child">
                     <div className='btn_bottom_container main-panel-back-btn'>

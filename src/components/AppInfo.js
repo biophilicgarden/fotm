@@ -11,9 +11,9 @@ export default function AppInfo({ setMainPanel }) {
                 <div className="mainPanelText">
                     <p>There are six focal plants dotted around the installation you can interact with via this Augmented Reality app.</p>
                     <p>To trigger the interaction, point your device at the image displayed next to the plant.</p>
-                    <p>An array of icons will be displayed as long as the image is within view of the camera.</p>
-                    <p>Click on these icons to display content related to the plant and the chosen pathway.</p>
-                    <p>You can close this panel by clicking the button at the bottom and you will be prompted to reflect on a certain aspect of your relationship with nature.</p>
+                    <p>An array of 5 icons will be displayed as long as the image is within view of the camera. These represent the 5 Pathways to Nature Connectedness.</p>
+                    <p>By clicking on these icons you can display content related to the plant and the chosen pathway.</p>
+                    <p>From here, click the button at the bottom of the panel and you will be receive a prompt enabling you to reflect on a certain aspect of your relationship with nature.</p>
                 </div>
                 <div className="center-child">
                     <div className='btn_bottom_container main-panel-back-btn'>
