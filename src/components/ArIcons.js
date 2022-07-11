@@ -119,6 +119,7 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
         {/* HAND - SENSES */}
         <a-entity id='text' text={`value: Senses; color: #FFF`} position='1.9 -0.39 1' scale='2 2 2' wireframe='true'></a-entity>
         <a-gltf-model id='hand-model' class='clickable' src='#handModel' position='0.7 -0.3 1' scale='4 4 4' rotation='90 0 0'></a-gltf-model>
+
       </a-entity>
 
     // render the info or reflection panel
@@ -127,7 +128,11 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     : smileClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={5} icon={<SmileIcon/>}/>
     : thumbsClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={6} icon={<ThumbsIcon/>}/>
     : handClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={3} icon={<HandIcon/>}/>
-    : reflection ? <ReflectionPanel reflectionText={plantData[targetIndex][8]} removeReflection={removeReflection}/>
+    : reflection ?
+    (<>
+      {/* <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box> */}
+      <ReflectionPanel reflectionText={plantData[targetIndex][8]} removeReflection={removeReflection}/>
+    </>)
     
     // fallback solution in case some weird state is encountered
     : setIconUIShow(true)

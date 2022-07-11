@@ -22,7 +22,7 @@ export default function BtnBottom({icon_type, svg, text, setMainPanel}) {
     return (
             <button
                 type='button'
-                className='button btn_bottom_child'
+                className='button btn-bottom-child'
                 onClick={() => {renderMainPanel(icon_type)}}
             >
                 <div className='btnSVG'>{ svg }</div>

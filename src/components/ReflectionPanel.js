@@ -13,6 +13,7 @@ export default function ReflectionPanel({reflectionText, removeReflection}) {
         <div id="reflection-container">
             <div className="reflection-content" onClick={removeReflection}>
                 <blockquote className="reflection-text"><p>{reflectionText}</p></blockquote>
+                <button id="returnARBtn" onClick={removeReflection}><span>Back to AR</span></button>
             </div>
         </div> 
     );

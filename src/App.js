@@ -62,7 +62,7 @@ function App() {
       :
       <div></div>}
         {/* setup the AR scene */}
-        <div className='scene_container'>
+        <div className='scene-container'>
           
           <ArScene
             data={plantData}
@@ -77,7 +77,7 @@ function App() {
         {/* button UI for bottom of screen - if one of the main panels is showing, don't render btns */}
         { mainPanel === 0 && btnBottomShow ? 
         <div className="center-child">
-          <div className='btn_bottom_container'>
+          <div className='btn-bottom-container'>
             {ICONS.map(icon => (
               <BtnBottom 
                 key={icon.id}

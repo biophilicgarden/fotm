@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/biophilia/static/css/main.fdc4f1ea.css",
-    "main.js": "/biophilia/static/js/main.c365dba7.js",
-    "static/media/meditation-bell.wav": "/biophilia/static/media/meditation-bell.8fd8c2cce8cdbf628a29.wav",
-    "static/media/TUOS_PRIMARY_LOGO_REVERSED.png": "/biophilia/static/media/TUOS_PRIMARY_LOGO_REVERSED.6068f3e9f10f54db5531.png",
-    "static/media/hand_turq.glb": "/biophilia/static/media/hand_turq.fa16e45d4c34b14b65c7.glb",
-    "static/media/face_turq.glb": "/biophilia/static/media/face_turq.ed8f92bd34508e484d3b.glb",
-    "static/media/eye_turq.glb": "/biophilia/static/media/eye_turq.4955e7d21b14a3541896.glb",
-    "static/media/heart_turq.glb": "/biophilia/static/media/heart_turq.08ccbd2fd8b184e965d2.glb",
-    "static/media/thumbs_turq.glb": "/biophilia/static/media/thumbs_turq.3b78ff130e5a75e330be.glb",
-    "static/media/plant_data.csv": "/biophilia/static/media/plant_data.eac7016a4776f7ff58ce.csv",
-    "static/media/people-group-solid.svg": "/biophilia/static/media/people-group-solid.214cfb6e03e8a480e37e5bcfcd998c05.svg",
-    "static/media/face-grin-regular-black.svg": "/biophilia/static/media/face-grin-regular-black.dc30ec7ba6ef271e77d0550d91cf89ff.svg",
-    "static/media/eye-solid-black.svg": "/biophilia/static/media/eye-solid-black.cd3288601a61415f3e95413e5a81d833.svg",
-    "static/media/thumbs-up-solid-black.svg": "/biophilia/static/media/thumbs-up-solid-black.5fd475c798470b2359d78ed83a9ddc64.svg",
-    "static/media/leaf-solid.svg": "/biophilia/static/media/leaf-solid.32d63a3231be5b94a50131252f1a1173.svg",
-    "static/media/hand-solid-black.svg": "/biophilia/static/media/hand-solid-black.9c52e8cf981e782e115a95a196da7a29.svg",
-    "index.html": "/biophilia/index.html",
-    "static/media/arrow-rotate-left-solid.svg": "/biophilia/static/media/arrow-rotate-left-solid.1a52fd692f87d56b02691713ee205ace.svg",
-    "static/media/circle-info-solid.svg": "/biophilia/static/media/circle-info-solid.4c3dc18f70d0511b412acaff80519b19.svg",
-    "static/media/heart-solid-black.svg": "/biophilia/static/media/heart-solid-black.d83f0c873ac8d169a461cf9785164972.svg",
-    "main.fdc4f1ea.css.map": "/biophilia/static/css/main.fdc4f1ea.css.map",
-    "main.c365dba7.js.map": "/biophilia/static/js/main.c365dba7.js.map"
+    "main.css": "/fotm/static/css/main.fdc4f1ea.css",
+    "main.js": "/fotm/static/js/main.13a095f9.js",
+    "static/media/meditation-bell.wav": "/fotm/static/media/meditation-bell.8fd8c2cce8cdbf628a29.wav",
+    "static/media/TUOS_PRIMARY_LOGO_REVERSED.png": "/fotm/static/media/TUOS_PRIMARY_LOGO_REVERSED.6068f3e9f10f54db5531.png",
+    "static/media/hand_turq.glb": "/fotm/static/media/hand_turq.fa16e45d4c34b14b65c7.glb",
+    "static/media/face_turq.glb": "/fotm/static/media/face_turq.ed8f92bd34508e484d3b.glb",
+    "static/media/eye_turq.glb": "/fotm/static/media/eye_turq.4955e7d21b14a3541896.glb",
+    "static/media/heart_turq.glb": "/fotm/static/media/heart_turq.08ccbd2fd8b184e965d2.glb",
+    "static/media/thumbs_turq.glb": "/fotm/static/media/thumbs_turq.3b78ff130e5a75e330be.glb",
+    "static/media/plant_data.csv": "/fotm/static/media/plant_data.eac7016a4776f7ff58ce.csv",
+    "static/media/people-group-solid.svg": "/fotm/static/media/people-group-solid.214cfb6e03e8a480e37e5bcfcd998c05.svg",
+    "static/media/face-grin-regular-black.svg": "/fotm/static/media/face-grin-regular-black.dc30ec7ba6ef271e77d0550d91cf89ff.svg",
+    "static/media/eye-solid-black.svg": "/fotm/static/media/eye-solid-black.cd3288601a61415f3e95413e5a81d833.svg",
+    "static/media/thumbs-up-solid-black.svg": "/fotm/static/media/thumbs-up-solid-black.5fd475c798470b2359d78ed83a9ddc64.svg",
+    "static/media/leaf-solid.svg": "/fotm/static/media/leaf-solid.32d63a3231be5b94a50131252f1a1173.svg",
+    "static/media/hand-solid-black.svg": "/fotm/static/media/hand-solid-black.9c52e8cf981e782e115a95a196da7a29.svg",
+    "index.html": "/fotm/index.html",
+    "static/media/arrow-rotate-left-solid.svg": "/fotm/static/media/arrow-rotate-left-solid.1a52fd692f87d56b02691713ee205ace.svg",
+    "static/media/circle-info-solid.svg": "/fotm/static/media/circle-info-solid.4c3dc18f70d0511b412acaff80519b19.svg",
+    "static/media/heart-solid-black.svg": "/fotm/static/media/heart-solid-black.d83f0c873ac8d169a461cf9785164972.svg",
+    "main.fdc4f1ea.css.map": "/fotm/static/css/main.fdc4f1ea.css.map",
+    "main.13a095f9.js.map": "/fotm/static/js/main.13a095f9.js.map"
   },
   "entrypoints": [
     "static/css/main.fdc4f1ea.css",
-    "static/js/main.c365dba7.js"
+    "static/js/main.13a095f9.js"
   ]
 }

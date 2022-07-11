@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.scene_container {
+.scene-container {
   margin: 20px auto;
   height: 100vh;
   width: 100%;
@@ -95,7 +95,7 @@
   display: none;
 }
 
-.btn_bottom_container {
+.btn-bottom-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -137,7 +137,7 @@
   z-index: 2;
 }
 
-.btn_bottom_child {
+.btn-bottom-child {
   margin: 0 auto;
 }
 
@@ -173,7 +173,6 @@
 }
 
 .info-panel {
-  /* background-color: white; */
   background: rgba(255,255,255,0.8);
   box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
   display: flex;
@@ -183,8 +182,6 @@
   border: 3px solid white;
   background: rgba(255,255,255,0.8);
   max-width: 500px;
-  /* outline: 3px solid white;
-  outline-offset: 10px; */
 }
 
 .info-content {
@@ -209,7 +206,6 @@
   justify-content: center;
 }
 
-
 .info-panel-icon {
   grid-column-start: 1;
   grid-column-end: 1;
@@ -228,7 +224,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .info-title {
@@ -241,8 +236,6 @@
   margin-top: 2px;
 }
 
-/* TODO: should check the display of this on a few devices, the CSS is a bit hacky
-   Alternative is to add the latin name to the actual title, put both in spans and restyle */
 .latin-name {
   grid-column-start: 2;
   grid-column-end: 2;
@@ -282,6 +275,11 @@
 
 #reflection-container {
   display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -293,29 +291,40 @@
   z-index: 3;
 }
 
-/* TODO: Style the reflections */
-.reflection-text {
-  width: 50vw;
-  max-width: 400px;
+.reflection-content {
   background: rgba(255,255,255,0.8);
-  border: 10px solid #FFF;
-  padding: 50px 30px;
-  border-radius: 50%;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  border-radius: 30px;
+  border: 3px solid white;
+  background: rgba(255,255,255,0.8);
+  max-width: 500px;
 }
 
-/* .reflection-text::before {
-  content: "";
-    position: absolute;
-    z-index: 10;
-    bottom: 33vh;
-    right: 25vw;
-    width: 40px;
-    height: 40px;
-    border: 10px solid #FFF;
-    background: rgba(255,255,255,0.8);
-    border-radius: 50px;
-    display: block;
-} */
+
+.reflection-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#returnARBtn {
+  width: 75%;
+  min-height: 40px;
+  border-radius: 30px;
+  border: transparent;
+  font-weight: 700;
+  background-color: rgba(96, 198, 125, 0.9);
+  margin: 0 auto;
+  margin-bottom: 5%;
+  display: inline-flex;
+  justify-content: center; /* center the content horizontally */
+  align-items: center; /* center the content vertically */
+}
+
+#returnARBtn span {
+  color: #FFF;
+}
 
 .mainPanel {
   text-align: center;
