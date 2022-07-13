@@ -10,7 +10,7 @@ import ThumbsModel from '../assets/models/thumbs_turq.glb'
 import HandModel from '../assets/models/hand_turq.glb'
 
 // compiled target file
-const target = 'targets_6_s1.mind';
+const target = 'targets-final.mind';
 
 function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow }) {
   const sceneRef = useRef(null);
