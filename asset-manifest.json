@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/fotm/static/css/main.f7a24da0.css",
-    "main.js": "/fotm/static/js/main.d8de411c.js",
+    "main.css": "/fotm/static/css/main.050db3ca.css",
+    "main.js": "/fotm/static/js/main.44b4b75e.js",
+    "static/media/untitled.glb": "/fotm/static/media/untitled.ad0a31e7250b56029729.glb",
     "static/media/meditation-bell.wav": "/fotm/static/media/meditation-bell.8fd8c2cce8cdbf628a29.wav",
     "static/media/TUOS_PRIMARY_LOGO_REVERSED.png": "/fotm/static/media/TUOS_PRIMARY_LOGO_REVERSED.6068f3e9f10f54db5531.png",
-    "static/media/hand_turq.glb": "/fotm/static/media/hand_turq.fa16e45d4c34b14b65c7.glb",
-    "static/media/face_turq.glb": "/fotm/static/media/face_turq.ed8f92bd34508e484d3b.glb",
-    "static/media/eye_turq.glb": "/fotm/static/media/eye_turq.4955e7d21b14a3541896.glb",
-    "static/media/heart_turq.glb": "/fotm/static/media/heart_turq.08ccbd2fd8b184e965d2.glb",
-    "static/media/thumbs_turq.glb": "/fotm/static/media/thumbs_turq.3b78ff130e5a75e330be.glb",
+    "static/media/face.glb": "/fotm/static/media/face.ccb06441cb25c5c65758.glb",
+    "static/media/eye.glb": "/fotm/static/media/eye.8027441af0296d0fa419.glb",
+    "static/media/hand.glb": "/fotm/static/media/hand.2717424ad5087d89748c.glb",
+    "static/media/heart.glb": "/fotm/static/media/heart.81e1ae19e878773c9f77.glb",
+    "static/media/thumbs.glb": "/fotm/static/media/thumbs.0f653b272832a10d4e6a.glb",
     "static/media/plant_data.csv": "/fotm/static/media/plant_data.eac7016a4776f7ff58ce.csv",
     "static/media/people-group-solid.svg": "/fotm/static/media/people-group-solid.214cfb6e03e8a480e37e5bcfcd998c05.svg",
     "static/media/face-grin-regular-black.svg": "/fotm/static/media/face-grin-regular-black.dc30ec7ba6ef271e77d0550d91cf89ff.svg",
@@ -20,11 +21,11 @@
     "static/media/arrow-rotate-left-solid.svg": "/fotm/static/media/arrow-rotate-left-solid.1a52fd692f87d56b02691713ee205ace.svg",
     "static/media/circle-info-solid.svg": "/fotm/static/media/circle-info-solid.4c3dc18f70d0511b412acaff80519b19.svg",
     "static/media/heart-solid-black.svg": "/fotm/static/media/heart-solid-black.d83f0c873ac8d169a461cf9785164972.svg",
-    "main.f7a24da0.css.map": "/fotm/static/css/main.f7a24da0.css.map",
-    "main.d8de411c.js.map": "/fotm/static/js/main.d8de411c.js.map"
+    "main.050db3ca.css.map": "/fotm/static/css/main.050db3ca.css.map",
+    "main.44b4b75e.js.map": "/fotm/static/js/main.44b4b75e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7a24da0.css",
-    "static/js/main.d8de411c.js"
+    "static/css/main.050db3ca.css",
+    "static/js/main.44b4b75e.js"
   ]
 }
