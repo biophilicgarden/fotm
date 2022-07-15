@@ -10,7 +10,7 @@ import { ReactComponent as ThumbsIcon } from '../assets/icons/thumbs-up-solid-bl
 import { ReactComponent as HandIcon } from '../assets/icons/hand-solid-black.svg';
 import { ReactComponent as EyeIcon } from '../assets/icons/eye-solid-black.svg';
 
-export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, setShowScanningUI, droppedTarget, setBtnBottomShow}) {
+export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, setShowScanningUI, droppedTarget, setBtnBottomShow, setModelShow}) {
   const [plantData, setPlantData] = useState([]);
   const [heartClick, setHeartClick] = useState(false);
   const [eyeClick, setEyeClick] = useState(false);
@@ -21,32 +21,38 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
 
   const handleHeartClick = useCallback((event) => {
     setIconUIShow(false);
+    setModelShow(false);
     setHeartClick(true);
-  }, [setIconUIShow]);
+  }, [setIconUIShow, setModelShow]);
 
   const handleEyeClick = useCallback((event) => {
     setIconUIShow(false);
+    setModelShow(false);
     setEyeClick(true);
-  }, [setIconUIShow]);
+  }, [setIconUIShow, setModelShow]);
 
   const handleSmileClick = useCallback((event) => {
     setIconUIShow(false);
+    setModelShow(false);
     setSmileClick(true);
-  }, [setIconUIShow]);
+  }, [setIconUIShow, setModelShow]);
 
   const handleThumbsClick = useCallback((event) => {
     setIconUIShow(false);
+    setModelShow(false);
     setThumbsClick(true);
-  }, [setIconUIShow]);
+  }, [setIconUIShow, setModelShow]);
 
   const handleHandClick = useCallback((event) => {
     setIconUIShow(false);
+    setModelShow(false);
     setHandClick(true);
-  }, [setIconUIShow]);
+  }, [setIconUIShow, setModelShow]);
 
   const removeReflection = useCallback(() => {
     setReflection(false)
     setIconUIShow(true);
+    setModelShow(true);
     setHeartClick(false);
     setEyeClick(false);
     setSmileClick(false);
@@ -54,7 +60,7 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     setHandClick(false);
     if (droppedTarget) { setShowScanningUI(true) };
     droppedTarget ? setBtnBottomShow(true) : setBtnBottomShow(false);
-    }, [droppedTarget, setBtnBottomShow, setIconUIShow, setShowScanningUI]);
+    }, [droppedTarget, setBtnBottomShow, setIconUIShow, setModelShow, setShowScanningUI]);
 
   const removePanel = useCallback(() => {
     setReflection(true);
@@ -101,10 +107,6 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
   return (
     iconUIShow ?
       <a-entity>
-
-        {targetIndex === 1 ?         <a-gltf-model id='plant-model' class='clickable' src='#plantModel' position='-0.2 -0.2 1' scale='0.5 0.5 0.5'
-        rotation='0 0 0' animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-gltf-model>
-: null}
 
         {/* HEART - COMPASSION */}
         <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.275 -0.6 1' scale='2 2 2' wireframe='true'></a-entity>

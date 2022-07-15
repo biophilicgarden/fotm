@@ -29,8 +29,9 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
 
   const [plantData, setPlantData] = useState([]);
   const [targetFound, setTargetFound] = useState(-1);
-  const [droppedTarget, setDroppedTarget] = useState(false)
+  const [droppedTarget, setDroppedTarget] = useState(false);
   const [iconUIShow, setIconUIShow] = useState(true);
+  const [modelShow, setModelShow] = useState(true);
 
   useEffect(() => {
     const sceneEl = sceneRef.current;
@@ -157,24 +158,6 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
   // }, [targetFound]);
 
   return (
-    // main AR scene
-    // <a-scene ref={sceneRef}
-    //   mindar-image={
-    //   `imageTargetSrc: ${window.location.origin}${window.location.pathname}/${target};
-    //   autoStart: false;
-    //   uiLoading: no;
-    //   uiError: no;
-    //   uiScanning: no;
-    //   missTolerance: 5;
-    //   filterMinCF: 0.00001;
-    //   filterBeta: 10;`
-    //   }
-    //   color-space='sRGB'
-    //   renderer='colorManagement: true, physicallyCorrectLights'
-    //   vr-mode-ui='enabled: false'
-    //   device-orientation-permission-ui='enabled: false'
-    //   >
-
     <a-scene ref={sceneRef}
       mindar-image={
       `imageTargetSrc: ${window.location.origin}${window.location.pathname}/${target};
@@ -223,7 +206,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       <a-entity ref={target0} mindar-image-target='targetIndex: 0' id='plantUiLayer'>      
         {targetFound === 0 &&
           <>
-            <a-gltf-model src='#treeOne' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+            { modelShow? <a-gltf-model src='#treeOne' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="1"
@@ -232,6 +215,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
             setShowScanningUI={setShowScanningUI}
             droppedTarget={droppedTarget}
             setBtnBottomShow={setBtnBottomShow}
+            setModelShow={setModelShow}
             />
           </>
         }
@@ -240,7 +224,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       <a-entity ref={target1} mindar-image-target='targetIndex: 1' id='plantUiLayer'>
         {targetFound === 1 &&  
           <>
-            <a-gltf-model src='#treeTwo' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+          { modelShow ? <a-gltf-model src='#treeTwo' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="2"
@@ -249,6 +233,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
             setShowScanningUI={setShowScanningUI}
             droppedTarget={droppedTarget}
             setBtnBottomShow={setBtnBottomShow}
+            setModelShow={setModelShow}
             />
           </>
         }
@@ -257,7 +242,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       <a-entity ref={target2} mindar-image-target='targetIndex: 2' id='plantUiLayer'>
         {targetFound === 2 &&  
           <>
-            <a-gltf-model src='#treeThree' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+          { modelShow? <a-gltf-model src='#treeThree' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="3"
@@ -266,6 +251,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
             setShowScanningUI={setShowScanningUI}
             droppedTarget={droppedTarget}
             setBtnBottomShow={setBtnBottomShow}
+            setModelShow={setModelShow}
             />
           </>
         }
@@ -274,7 +260,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       <a-entity ref={target3} mindar-image-target='targetIndex: 3' id='plantUiLayer'>
         {targetFound === 3 &&  
           <>
-            <a-gltf-model src='#treeFour' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+          { modelShow ? <a-gltf-model src='#treeFour' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="4"
@@ -283,6 +269,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
             setShowScanningUI={setShowScanningUI}
             droppedTarget={droppedTarget}
             setBtnBottomShow={setBtnBottomShow}
+            setModelShow={setModelShow}
             />
           </>
         }
@@ -291,7 +278,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       <a-entity ref={target4} mindar-image-target='targetIndex: 4' id='plantUiLayer'>
         {targetFound === 4 &&
           <>
-            <a-gltf-model src='#treeFive' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+          { modelShow ? <a-gltf-model src='#treeFive' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="5"
@@ -300,6 +287,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
             setShowScanningUI={setShowScanningUI}
             droppedTarget={droppedTarget}
             setBtnBottomShow={setBtnBottomShow}
+            setModelShow={setModelShow}
             />
           </>
         }
@@ -307,17 +295,18 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
 
       <a-entity ref={target5} mindar-image-target='targetIndex: 5' id='plantUiLayer'>
         {targetFound === 5 &&
-          <>
-            <a-gltf-model src='#treeSix' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
-            <ArIcons
-            data={plantData}
-            targetIndex="6"
-            iconUIShow={iconUIShow}
-            setIconUIShow={setIconUIShow}
-            setShowScanningUI={setShowScanningUI}
-            droppedTarget={droppedTarget}
-            setBtnBottomShow={setBtnBottomShow}
-            />
+        <>
+        { modelShow? <a-gltf-model src='#treeSix' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+          <ArIcons
+          data={plantData}
+          targetIndex="6"
+          iconUIShow={iconUIShow}
+          setIconUIShow={setIconUIShow}
+          setShowScanningUI={setShowScanningUI}
+          droppedTarget={droppedTarget}
+          setBtnBottomShow={setBtnBottomShow}
+          setModelShow={setModelShow}
+          />
           </>
         }
       </a-entity>
