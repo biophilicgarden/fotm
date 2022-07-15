@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fotm/static/css/main.050db3ca.css",
-    "main.js": "/fotm/static/js/main.44b4b75e.js",
+    "main.js": "/fotm/static/js/main.50da6051.js",
     "static/media/untitled.glb": "/fotm/static/media/untitled.ad0a31e7250b56029729.glb",
     "static/media/meditation-bell.wav": "/fotm/static/media/meditation-bell.8fd8c2cce8cdbf628a29.wav",
     "static/media/TUOS_PRIMARY_LOGO_REVERSED.png": "/fotm/static/media/TUOS_PRIMARY_LOGO_REVERSED.6068f3e9f10f54db5531.png",
@@ -22,10 +22,10 @@
     "static/media/circle-info-solid.svg": "/fotm/static/media/circle-info-solid.4c3dc18f70d0511b412acaff80519b19.svg",
     "static/media/heart-solid-black.svg": "/fotm/static/media/heart-solid-black.d83f0c873ac8d169a461cf9785164972.svg",
     "main.050db3ca.css.map": "/fotm/static/css/main.050db3ca.css.map",
-    "main.44b4b75e.js.map": "/fotm/static/js/main.44b4b75e.js.map"
+    "main.50da6051.js.map": "/fotm/static/js/main.50da6051.js.map"
   },
   "entrypoints": [
     "static/css/main.050db3ca.css",
-    "static/js/main.44b4b75e.js"
+    "static/js/main.50da6051.js"
   ]
 }
