@@ -3,11 +3,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import ArIcons from './ArIcons';
 
 // 3D models
-import HeartModel from '../assets/models/heart_turq.glb'
-import EyeModel from '../assets/models/eye_turq.glb'
-import SmileModel from '../assets/models/face_turq.glb'
-import ThumbsModel from '../assets/models/thumbs_turq.glb'
-import HandModel from '../assets/models/hand_turq.glb'
+import HeartModel from '../assets/models/heart.glb'
+import EyeModel from '../assets/models/eye.glb'
+import SmileModel from '../assets/models/face.glb'
+import ThumbsModel from '../assets/models/thumbs.glb'
+import HandModel from '../assets/models/hand.glb'
+import PlantModel from '../assets/models/untitled.glb'
 
 // compiled target file
 const target = 'targets-final.mind';
@@ -176,6 +177,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
         <a-asset-item id="smileModel" src={SmileModel}></a-asset-item>
         <a-asset-item id="thumbsModel" src={ThumbsModel}></a-asset-item>
         <a-asset-item id="handModel" src={HandModel}></a-asset-item>
+        <a-asset-item id="plantModel" src={PlantModel}></a-asset-item>
       </a-assets>
 
       {/* add camera with raycaster looking for clickable targets */}

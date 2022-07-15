@@ -65,28 +65,29 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     setHandClick(false);
   }, []);
 
+  // add event listeners to the invisible planes in front of the pathways icons
   useEffect(() => {
-    const heartModel = document.querySelector('#heart-model');
-    if (heartModel) { heartModel.addEventListener('click', handleHeartClick); }
+    const heartPlane = document.querySelector('#heart-plane');
+    if (heartPlane) { heartPlane.addEventListener('click', handleHeartClick); }
 
-    const eyeModel = document.querySelector('#eye-model');
-    if (eyeModel) { eyeModel.addEventListener('click', handleEyeClick); }
+    const eyePlane = document.querySelector('#eye-plane');
+    if (eyePlane) { eyePlane.addEventListener('click', handleEyeClick); }
 
-    const smileModel = document.querySelector('#smile-model');
-    if (smileModel) { smileModel.addEventListener('click', handleSmileClick); }
+    const smilePlane = document.querySelector('#smile-plane');
+    if (smilePlane) { smilePlane.addEventListener('click', handleSmileClick); }
 
-    const thumbsModel = document.querySelector('#thumbs-model');
-    if (thumbsModel) { thumbsModel.addEventListener('click', handleThumbsClick); }
- 
-    const handModel = document.querySelector('#hand-model');
-    if (handModel) { handModel.addEventListener('click', handleHandClick); }
+    const thumbsPlane = document.querySelector('#thumbs-plane');
+    if (thumbsPlane) { thumbsPlane.addEventListener('click', handleThumbsClick); }
+
+    const handPlane = document.querySelector('#hand-plane');
+    if (handPlane) { handPlane.addEventListener('click', handleHandClick); }
 
     return () => {
-      if(heartModel) heartModel.removeEventListener('click', handleHeartClick);
-      if(eyeModel) eyeModel.removeEventListener('click', handleEyeClick);
-      if(smileModel) smileModel.removeEventListener('click', handleSmileClick);
-      if(thumbsModel) thumbsModel.removeEventListener('click', handleThumbsClick);
-      if(handModel) handModel.removeEventListener('click', handleHandClick);
+      if(heartPlane) heartPlane.removeEventListener('click', handleHeartClick);
+      if(eyePlane) eyePlane.removeEventListener('click', handleEyeClick);
+      if(smilePlane) smilePlane.removeEventListener('click', handleSmileClick);
+      if(thumbsPlane) thumbsPlane.removeEventListener('click', handleThumbsClick);
+      if(handPlane) handPlane.removeEventListener('click', handleHandClick);
     };
   }, [handleEyeClick, handleHandClick, handleHeartClick, handleSmileClick, handleThumbsClick, iconUIShow]);
 
@@ -100,25 +101,34 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
   return (
     iconUIShow ?
       <a-entity>
+
+        <a-gltf-model id='plant-model' class='clickable' src='#plantModel' position='-0.2 -0.2 1' scale='0.5 0.5 0.5'
+        rotation='0 0 0' animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-gltf-model>
+
         {/* HEART - COMPASSION */}
-        <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.1 -0.35 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='heart-model' class='clickable' src='#heartModel' position='-1.1 -0.3 1' scale='4 4 4' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.275 -0.6 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='heart-model' class='clickable' src='#heartModel' position='-1 -0.3 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-plane id='heart-plane' class='clickable' position='-1 -0.3 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* EYE - BEAUTY*/}
-        <a-entity id='text' text={`value: Beauty; color: #FFF`} position='0.3 0.35 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='eye-model' class='clickable' src='#eyeModel' position='-0.85 0.4 1' scale='4 4 4' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Beauty; color: #FFF`} position='0 0.05 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='eye-model' class='clickable' src='#eyeModel' position='-0.85 0.4 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-plane id='eye-plane' class='clickable' position='-0.85 0.4 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* SMILE - EMOTION */}
-        <a-entity id='text' text={`value: Emotion; color: #FFF`} position='0.9 0.8 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='smile-model' class='clickable' src='#smileModel' position='-0.2 0.9 1' scale='4 4 4' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Emotion; color: #FFF`} position='0.63 0.58 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='smile-model' class='clickable' src='#smileModel' position='-0.2 0.9 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-plane id='smile-plane' class='clickable' position='-0.2 0.9 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* THUMBS - MEANING */}
-        <a-entity id='text' text={`value: Meaning; color: #FFF`} position='1.55 0.35 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='thumbs-model' class='clickable' src='#thumbsModel' position='0.45 0.4 1' scale='4 4 4' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Meaning; color: #FFF`} position='1.25 0.15 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='thumbs-model' class='clickable' src='#thumbsModel' position='0.45 0.4 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-plane id='thumbs-plane' class='clickable' position='0.45 0.4 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* HAND - SENSES */}
-        <a-entity id='text' text={`value: Senses; color: #FFF`} position='1.9 -0.39 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='hand-model' class='clickable' src='#handModel' position='0.7 -0.3 1' scale='4 4 4' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Senses; color: #FFF`} position='1.45 -0.65 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='hand-model' class='clickable' src='#handModel' position='0.6 -0.3 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-plane id='hand-plane' class='clickable' position='0.6 -0.3 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
       </a-entity>
 
@@ -129,8 +139,8 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     : thumbsClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={6} icon={<ThumbsIcon/>}/>
     : handClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={3} icon={<HandIcon/>}/>
     : reflection ?
+
     (<>
-      {/* <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box> */}
       <ReflectionPanel reflectionText={plantData[targetIndex][8]} removeReflection={removeReflection}/>
     </>)
     

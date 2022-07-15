@@ -303,7 +303,6 @@
   max-width: 500px;
 }
 
-
 .reflection-text {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -329,14 +328,17 @@
 .mainPanel {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .mainPanelContent {
   padding: 30px;
-  max-width: 500px;
-  margin: 0 auto;
-  overflow: none;
-  max-height: 75vh;
+  overflow: scroll;
+  max-height: 70vh;
+  z-index: 2;
+  position: absolute;
+
 }
 
 .mainPanelTitle {
@@ -347,28 +349,28 @@
 .mainPanelText {
   line-height: 1.1;
   color: #FFF;
-}
-
-.mainPanelText > ul {
-  list-style: none;
+  z-index: 2;
 }
 
 .AppInfoContainer {
-  background: linear-gradient(to bottom right, #00BFAD, #99A3D4);
-  /* background: darkcyan; */
+  /* background: linear-gradient(to bottom right, #00BFAD, #99A3D4); */
+  background: linear-gradient(to bottom right, #7d8bd2, #00BFAD);
   height: 100vh;
+  z-index: 2;
 }
 
 .BiophiliaInfoContainer {
-  background: linear-gradient(to bottom right,#047c84 ,#006a5c, #02ab82, #61bf9a);
-  /* background: linear-gradient(to bottom right, #00BFAD, #99A3D4); */
+  /* background: linear-gradient(to bottom right,#047c84 ,#006a5c, #02ab82, #61bf9a); */
+  background: linear-gradient(to bottom right,#00BFAD, #f0e28c);
   height: 100vh;
+  z-index: 2;
 }
 
 .TeamInfoContainer {
-  background: linear-gradient(to bottom right, #d47b8a, #f6edb2);
-  /* background: rgb(255,134,207); */
+  /* background: linear-gradient(to bottom right, #d47b8a, #f6edb2); */
+  background: linear-gradient(to bottom right, #f0e28c, #d47b8a);
   height: 100vh; 
+  z-index: 2;
 }
 
 .main-panel-back-btn {

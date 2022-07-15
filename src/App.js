@@ -1,3 +1,4 @@
+// main imports
 import { React, useEffect, useState, useCallback } from 'react';
 import { usePapaParse } from 'react-papaparse';
 import 'mind-ar/dist/mindar-image.prod.js';
@@ -27,12 +28,12 @@ const ICONS = [
 ];
 
 function App() {
-  const [plantData, setPlantData] = useState();
+  const [plantData, setPlantData] = useState(null);
   const [scanningUIShow, setScanningUIShow] = useState(true);
   const [mainPanel, setMainPanel] = useState(0);
   const [btnBottomShow, setBtnBottomShow] = useState(true);
 
-  // parse the csv file
+  // parse csv file
   const { readRemoteFile } = usePapaParse();
   useEffect(() => {
     const handleReadRemoteFile = () => {
@@ -44,7 +45,7 @@ function App() {
     };
     handleReadRemoteFile();
     // eslint-disable-next-line
-  }, []); // empty dependency list means callback executes just the once
+  }, []);
 
   const removeMainPanel = useCallback(() => {
     setMainPanel(0);
@@ -53,17 +54,15 @@ function App() {
   return (
     <div>
       <div id='mainApp' className='App'>
-      {
-      mainPanel === 1 ? <AppInfo setMainPanel={setMainPanel}/>
-      :
-      mainPanel === 2 ? <BiophiliaInfo setMainPanel={setMainPanel}/>
-      :
-      mainPanel === 3 ? <TeamInfo setMainPanel={setMainPanel}/>
-      :
-      <div></div>}
-        {/* setup the AR scene */}
+
+        {/* show the main panels if clicked */}
+        { mainPanel === 1 ? <AppInfo setMainPanel={setMainPanel}/>
+        : mainPanel === 2 ? <BiophiliaInfo setMainPanel={setMainPanel}/>
+        : mainPanel === 3 ? <TeamInfo setMainPanel={setMainPanel}/>
+        : null }
+
+        {/* setup AR scene */}
         <div className='scene-container'>
-          
           <ArScene
             data={plantData}
             setShowScanningUI={setScanningUIShow}
@@ -71,10 +70,11 @@ function App() {
             setBtnBottomShow={setBtnBottomShow}
           />
           
+          {/* show scanning UI */}
           {scanningUIShow && <ScanningUI />}
         </div>
 
-        {/* button UI for bottom of screen - if one of the main panels is showing, don't render btns */}
+        {/* show main UI buttons */}
         { mainPanel === 0 && btnBottomShow ? 
         <div className="center-child">
           <div className='btn-bottom-container'>
@@ -89,8 +89,7 @@ function App() {
             ))}
           </div>
         </div>
-        : <div></div>
-        }
+        : null }
       </div>
     </div>
   );
