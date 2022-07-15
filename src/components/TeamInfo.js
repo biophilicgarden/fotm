@@ -5,11 +5,11 @@ import { ReactComponent as BackIcon } from '../assets/icons/arrow-rotate-left-so
 export default function TeamInfo({ setMainPanel }) {
 
     return (
-        <div className="mainPanel TeamInfoContainer">
-            <div className="mainPanelContent">      
-                <span className="mainPanelTitle">Team</span>
+        <div className="main-panel team-info-container">
+            <div className="main-panel-content">      
+                <span className="main-panel-title">Team</span>
                 
-                <div className="mainPanelText">
+                <div className="main-panel-text fade">
                     <div className="team-member">
                         <h1>Benedict Barrow - Software Developer</h1>
                         <p>Computer Science, University of Sheffield</p>

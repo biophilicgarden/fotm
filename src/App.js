@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div>
-      <div id='mainApp' className='App'>
+      <div id='main-app' className='app'>
 
         {/* show the main panels if clicked */}
         { mainPanel === 1 ? <AppInfo setMainPanel={setMainPanel}/>

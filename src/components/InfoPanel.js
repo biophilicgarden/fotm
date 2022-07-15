@@ -20,7 +20,7 @@ export default function InfoPanel({removePanel, data, targetIndex, col, icon}) {
                     </div>
                     <p className="info-text">{data[targetIndex][col]}</p>
                 </div>
-                <button id="reflectionBtn" onClick={removePanel}><span>Reflect</span></button>
+                <button id="reflection-btn" onClick={removePanel}><span>Reflect</span></button>
             </div>
         </div> 
     );
