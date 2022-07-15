@@ -102,8 +102,9 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     iconUIShow ?
       <a-entity>
 
-        <a-gltf-model id='plant-model' class='clickable' src='#plantModel' position='-0.2 -0.2 1' scale='0.5 0.5 0.5'
+        {targetIndex === 1 ?         <a-gltf-model id='plant-model' class='clickable' src='#plantModel' position='-0.2 -0.2 1' scale='0.5 0.5 0.5'
         rotation='0 0 0' animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-gltf-model>
+: null}
 
         {/* HEART - COMPASSION */}
         <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.275 -0.6 1' scale='2 2 2' wireframe='true'></a-entity>

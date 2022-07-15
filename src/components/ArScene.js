@@ -8,7 +8,12 @@ import EyeModel from '../assets/models/eye.glb'
 import SmileModel from '../assets/models/face.glb'
 import ThumbsModel from '../assets/models/thumbs.glb'
 import HandModel from '../assets/models/hand.glb'
-import PlantModel from '../assets/models/untitled.glb'
+import TreeOne from '../assets/models/tree1.glb'
+import TreeTwo from '../assets/models/tree2.glb'
+import TreeThree from '../assets/models/tree3.glb'
+import TreeFour from '../assets/models/tree4.glb'
+import TreeFive from '../assets/models/tree5.glb'
+import TreeSix from '../assets/models/tree6.glb'
 
 // compiled target file
 const target = 'targets-final.mind';
@@ -152,7 +157,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
   // }, [targetFound]);
 
   return (
-    // make the ar-scene with our target and some other attributes
+    // main AR scene
     <a-scene ref={sceneRef}
       mindar-image={
       `imageTargetSrc: ${window.location.origin}${window.location.pathname}/${target};
@@ -161,8 +166,8 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       uiError: no;
       uiScanning: no;
       missTolerance: 5;
-      filterMinCF:0.0001;
-      filterBeta: 1000`
+      filterMinCF: 0.00001;
+      filterBeta: 10;`
       }
       color-space='sRGB'
       renderer='colorManagement: true, physicallyCorrectLights'
@@ -177,8 +182,18 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
         <a-asset-item id="smileModel" src={SmileModel}></a-asset-item>
         <a-asset-item id="thumbsModel" src={ThumbsModel}></a-asset-item>
         <a-asset-item id="handModel" src={HandModel}></a-asset-item>
-        <a-asset-item id="plantModel" src={PlantModel}></a-asset-item>
+        <a-asset-item id="treeOne" src={TreeOne}></a-asset-item>
+        <a-asset-item id="treeTwo" src={TreeTwo}></a-asset-item>
+        <a-asset-item id="treeThree" src={TreeThree}></a-asset-item>
+        <a-asset-item id="treeFour" src={TreeFour}></a-asset-item>
+        <a-asset-item id="treeFive" src={TreeFive}></a-asset-item>
+        <a-asset-item id="treeSix" src={TreeSix}></a-asset-item>
       </a-assets>
+
+      {/* Define a mixin for the rotation animation */}
+      <a-mixin id="rotateY" 
+        animation__m="property: rotation; to: 0 360 0; loop: true; dur: 7000; easing:linear;">
+      </a-mixin> 
 
       {/* add camera with raycaster looking for clickable targets */}
       <a-camera
@@ -191,6 +206,8 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       </a-camera> 
       
       <a-entity ref={target0} mindar-image-target='targetIndex: 0' id='plantUiLayer'>
+        <a-gltf-model src='#treeOne' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+          
         {targetFound === 0 &&
           <ArIcons
           data={plantData}
@@ -205,6 +222,8 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       </a-entity>
 
       <a-entity ref={target1} mindar-image-target='targetIndex: 1' id='plantUiLayer'>
+        <a-gltf-model src='#treeTwo' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+
         {targetFound === 1 &&  
           <ArIcons
           data={plantData}
@@ -219,6 +238,8 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       </a-entity>
 
       <a-entity ref={target2} mindar-image-target='targetIndex: 2' id='plantUiLayer'>
+        <a-gltf-model src='#treeThree' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+
         {targetFound === 2 &&  
           <ArIcons
           data={plantData}
@@ -233,6 +254,8 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       </a-entity>
 
       <a-entity ref={target3} mindar-image-target='targetIndex: 3' id='plantUiLayer'>
+        <a-gltf-model src='#treeFour' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+
         {targetFound === 3 &&  
           <ArIcons
           data={plantData}
@@ -247,6 +270,8 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       </a-entity>
 
       <a-entity ref={target4} mindar-image-target='targetIndex: 4' id='plantUiLayer'>
+        <a-gltf-model src='#treeFive' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+
         {targetFound === 4 &&  
           <ArIcons
           data={plantData}
@@ -261,6 +286,8 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       </a-entity>
 
       <a-entity ref={target5} mindar-image-target='targetIndex: 5' id='plantUiLayer'>
+        <a-gltf-model src='#treeSix' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model>
+
         {targetFound === 5 &&  
           <ArIcons
           data={plantData}

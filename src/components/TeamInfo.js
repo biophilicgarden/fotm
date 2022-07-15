@@ -11,7 +11,7 @@ export default function TeamInfo({ setMainPanel }) {
                 
                 <div className="mainPanelText">
                     <div className="team-member">
-                        <h1>Ben Barrow - Developer</h1>
+                        <h1>Benedict Barrow - Software Developer</h1>
                         <p>Computer Science, University of Sheffield</p>
                     </div>
 
@@ -33,7 +33,6 @@ export default function TeamInfo({ setMainPanel }) {
 
                     <div className="team-member">
                         <h1>Andrew Hall - 3D Artist</h1>
-                        <p>NOT SURE WHAT I SHOULD PUT HERE! ;)</p>
                     </div>
 
                     <div className="team-member">
