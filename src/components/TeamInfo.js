@@ -6,7 +6,7 @@ export default function TeamInfo({ setMainPanel }) {
 
     return (
         <div className="main-panel team-info-container">
-            <div className="main-panel-content">      
+            <div className="main-panel-content fade">      
                 <span className="main-panel-title">Team</span>
                 
                 <div className="main-panel-text fade">
@@ -40,19 +40,19 @@ export default function TeamInfo({ setMainPanel }) {
                         <p>School of Psychology, University of Derby</p>
                     </div>
                 </div>
-
-                <div className="center-child">
-                    <div className='btn-bottom-container main-panel-back-btn'>
-                        <BtnBottom
-                            key={'back_btn'}
-                            icon_type={'back_btn'}
-                            svg={<BackIcon />}
-                            text={'BACK'}
-                            setMainPanel={setMainPanel}
-                        />
-                    </div>
-                </div> 
             </div>
+
+
+                <div className='btn-bottom-container main-panel-back-btn'>
+                    <BtnBottom
+                        key={'back_btn'}
+                        icon_type={'back_btn'}
+                        svg={<BackIcon />}
+                        text={'BACK'}
+                        setMainPanel={setMainPanel}
+                    />
+                </div>
+
         </div>
     );
 }

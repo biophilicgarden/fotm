@@ -6,10 +6,10 @@ export default function AppInfo({ setMainPanel }) {
 
     return (
         <div className="main-panel app-info-container">
-            <div className="main-panel-content">
+            <div className="main-panel-content fade">
                 <span className="main-panel-title">Using this App</span>
                 
-                <div className="main-panel-text fade">
+                <div className="main-panel-text">
                     <p>There are six focal plants dotted around the installation you can interact with via this Augmented Reality app.</p>
                     <p>To trigger an interaction, point your device at the image displayed near the plant.</p>
                     <p>An array of 5 icons will be displayed as long as the image is within view of the camera. These represent the 5 Pathways to Nature Connectedness.</p>
@@ -19,19 +19,24 @@ export default function AppInfo({ setMainPanel }) {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum efficitur tellus. Cras pretium lobortis risus, vitae lobortis lectus rhoncus quis. Aliquam erat volutpat. Morbi fermentum lectus lacus, nec lobortis sapien consectetur sit amet. Curabitur purus nisi, vestibulum ut tellus non, gravida maximus erat. Nunc ante odio, aliquam sed diam eget, fermentum tincidunt ligula. Pellentesque et nunc ex. Curabitur non eros vitae enim hendrerit faucibus quis vitae ante. Duis id lorem interdum, elementum sem eu, volutpat nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris suscipit eu mi eu fringilla.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum efficitur tellus. Cras pretium lobortis risus, vitae lobortis lectus rhoncus quis. Aliquam erat volutpat. Morbi fermentum lectus lacus, nec lobortis sapien consectetur sit amet. Curabitur purus nisi, vestibulum ut tellus non, gravida maximus erat. Nunc ante odio, aliquam sed diam eget, fermentum tincidunt ligula. Pellentesque et nunc ex. Curabitur non eros vitae enim hendrerit faucibus quis vitae ante. Duis id lorem interdum, elementum sem eu, volutpat nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris suscipit eu mi eu fringilla.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum efficitur tellus. Cras pretium lobortis risus, vitae lobortis lectus rhoncus quis. Aliquam erat volutpat. Morbi fermentum lectus lacus, nec lobortis sapien consectetur sit amet. Curabitur purus nisi, vestibulum ut tellus non, gravida maximus erat. Nunc ante odio, aliquam sed diam eget, fermentum tincidunt ligula. Pellentesque et nunc ex. Curabitur non eros vitae enim hendrerit faucibus quis vitae ante. Duis id lorem interdum, elementum sem eu, volutpat nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris suscipit eu mi eu fringilla.</p>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                 </div>
+            </div>
 
-                <div className="center-child">
-                    <div className='btn-bottom-container main-panel-back-btn'>
-                    <BtnBottom 
-                        key={'back_btn'}
-                        icon_type={'back_btn'}
-                        svg={<BackIcon />}
-                        text={'BACK'}
-                        setMainPanel={setMainPanel}
-                    />
-                    </div> 
-                </div>
+            <div className='btn-bottom-container main-panel-back-btn'>
+                <BtnBottom 
+                    key={'back_btn'}
+                    icon_type={'back_btn'}
+                    svg={<BackIcon />}
+                    text={'BACK'}
+                    setMainPanel={setMainPanel} />
             </div>
         </div>
     );
