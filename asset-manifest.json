@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/fotm/static/css/main.760fdd2e.css",
-    "main.js": "/fotm/static/js/main.9df07c56.js",
+    "main.js": "/fotm/static/js/main.0e262f9d.js",
+    "static/media/berries.glb": "/fotm/static/media/berries.872e2c5c53d1fbde827e.glb",
     "static/media/meditation-bell.wav": "/fotm/static/media/meditation-bell.8fd8c2cce8cdbf628a29.wav",
     "static/media/tree4.glb": "/fotm/static/media/tree4.c3657aeeb288befb30a9.glb",
     "static/media/tree3.glb": "/fotm/static/media/tree3.796c833bb468d29d89be.glb",
@@ -27,10 +28,10 @@
     "static/media/circle-info-solid.svg": "/fotm/static/media/circle-info-solid.4c3dc18f70d0511b412acaff80519b19.svg",
     "static/media/heart-solid-black.svg": "/fotm/static/media/heart-solid-black.d83f0c873ac8d169a461cf9785164972.svg",
     "main.760fdd2e.css.map": "/fotm/static/css/main.760fdd2e.css.map",
-    "main.9df07c56.js.map": "/fotm/static/js/main.9df07c56.js.map"
+    "main.0e262f9d.js.map": "/fotm/static/js/main.0e262f9d.js.map"
   },
   "entrypoints": [
     "static/css/main.760fdd2e.css",
-    "static/js/main.9df07c56.js"
+    "static/js/main.0e262f9d.js"
   ]
 }
