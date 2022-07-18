@@ -407,7 +407,6 @@
   bottom: 5vh;
   right: 0;
   animation: rotation 3s linear;
-  /* animation: fadeOut 3s linear; */
   transform-origin: 50% 50%;
 }
 
@@ -416,15 +415,6 @@
     transform: rotate(-30deg) translateX(-25px) translateY(-50px);
   }
   75% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
     opacity:1;
   }
   100% {

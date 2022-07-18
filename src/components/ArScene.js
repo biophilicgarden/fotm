@@ -23,6 +23,10 @@ import TreeSix from '../assets/models/tree6.glb'
 import Berries from '../assets/models/berries.glb'
 import Honeysuckle from '../assets/models/honeysuckle.glb'
 import Cranesbill from '../assets/models/cranesbill.glb'
+import Birch from '../assets/models/birch.glb'
+import MaidenPink from '../assets/models/maidenpink.glb'
+import Campanula from '../assets/models/campanula.glb'
+
 
 // compiled target file
 const target = 'targets-final.mind';
@@ -263,6 +267,9 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
         <a-asset-item id="berries" src={Berries}></a-asset-item>
         <a-asset-item id="honeysuckle" src={Honeysuckle}></a-asset-item>
         <a-asset-item id="cranesbill" src={Cranesbill}></a-asset-item>
+        <a-asset-item id="birch" src={Birch}></a-asset-item>
+        <a-asset-item id="maidenpink" src={MaidenPink}></a-asset-item>
+        <a-asset-item id="campanula" src={Campanula}></a-asset-item>
 
         <a-asset-item id="treeOne" src={TreeOne}></a-asset-item>
         <a-asset-item id="treeTwo" src={TreeTwo}></a-asset-item>
@@ -320,7 +327,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               <ReflectionPanel reflectionText={reflectionQuestions[randomIndex]} removeReflection={removeReflection}/>
               :
               <a-entity>
-                { modelShow ? <a-gltf-model id='birch-model' class='clickable' src='#treeTwo' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+                { modelShow ? <a-gltf-model id='birch-model' class='clickable' src='#birch' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
                   <ArIcons
                   data={plantData}
                   targetIndex="2"
@@ -395,7 +402,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               <ReflectionPanel reflectionText={reflectionQuestions[randomIndex]} removeReflection={removeReflection}/>
               :
               <a-entity>
-                { modelShow ? <a-gltf-model id='pinkmaiden-model' class='clickable' src='#treeFive' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+                { modelShow ? <a-gltf-model id='pinkmaiden-model' class='clickable' src='#maidenpink' position='-0.2 -0.5 1' scale='0.4 0.4 0.4' mixin="rotateY"></a-gltf-model> : null }
                   <ArIcons
                   data={plantData}
                   targetIndex="5"
@@ -420,7 +427,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               <ReflectionPanel reflectionText={reflectionQuestions[randomIndex]} removeReflection={removeReflection}/>
               :
               <a-entity>
-                { modelShow? <a-gltf-model id='campanula-model' class='clickable' src='#treeSix' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+                { modelShow? <a-gltf-model id='campanula-model' class='clickable' src='#campanula' position='-0.2 -0.5 1' scale='0.3 0.3 0.3' mixin="rotateY"></a-gltf-model> : null }
                   <ArIcons
                   data={plantData}
                   targetIndex="6"
