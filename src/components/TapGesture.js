@@ -12,7 +12,7 @@ export default function TapGesture( {showGesture, setShowGesture} ) {
             return () => {clearTimeout(timer);
             setShowGesture(true);}
           };
-    }, []);
+    }, [setShowGesture]);
 
     return (
         <div id="tap-gesture">{showGesture && <Tap/> }</div>
