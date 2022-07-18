@@ -39,19 +39,28 @@ export default function TeamInfo({ setMainPanel }) {
                         <h1>Miles Richardson - Consultant</h1>
                         <p>School of Psychology, University of Derby</p>
                     </div>
+
+                    {/* These breaks allows page to be fully scrolled up without faffing around with CSS */}
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                 </div>
             </div>
 
-
-                <div className='btn-bottom-container main-panel-back-btn'>
-                    <BtnBottom
-                        key={'back_btn'}
-                        icon_type={'back_btn'}
-                        svg={<BackIcon />}
-                        text={'BACK'}
-                        setMainPanel={setMainPanel}
-                    />
-                </div>
+            <div className='btn-bottom-container main-panel-back-btn'>
+                <BtnBottom
+                    key={'back_btn'}
+                    icon_type={'back_btn'}
+                    svg={<BackIcon />}
+                    text={'BACK'}
+                    setMainPanel={setMainPanel}
+                />
+            </div>
 
         </div>
     );

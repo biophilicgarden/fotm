@@ -8,12 +8,19 @@ import EyeModel from '../assets/models/eye.glb'
 import SmileModel from '../assets/models/face.glb'
 import ThumbsModel from '../assets/models/thumbs.glb'
 import HandModel from '../assets/models/hand.glb'
+
+// test assets
 import TreeOne from '../assets/models/tree1.glb'
 import TreeTwo from '../assets/models/tree2.glb'
 import TreeThree from '../assets/models/tree3.glb'
 import TreeFour from '../assets/models/tree4.glb'
 import TreeFive from '../assets/models/tree5.glb'
 import TreeSix from '../assets/models/tree6.glb'
+
+// final assets
+import Berries from '../assets/models/berries.glb'
+import Honeysuckle from '../assets/models/honeysuckle.glb'
+import Cranesbill from '../assets/models/cranesbill.glb'
 
 // compiled target file
 const target = 'targets-final.mind';
@@ -180,6 +187,10 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
         <a-asset-item id="smileModel" src={SmileModel}></a-asset-item>
         <a-asset-item id="thumbsModel" src={ThumbsModel}></a-asset-item>
         <a-asset-item id="handModel" src={HandModel}></a-asset-item>
+        <a-asset-item id="berries" src={Berries}></a-asset-item>
+        <a-asset-item id="honeysuckle" src={Honeysuckle}></a-asset-item>
+        <a-asset-item id="cranesbill" src={Cranesbill}></a-asset-item>
+
         <a-asset-item id="treeOne" src={TreeOne}></a-asset-item>
         <a-asset-item id="treeTwo" src={TreeTwo}></a-asset-item>
         <a-asset-item id="treeThree" src={TreeThree}></a-asset-item>
@@ -200,13 +211,17 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
         look-controls='enabled: false'
         cursor='fuse: false; rayOrigin: mouse;'
         // eslint-disable-next-line no-template-curly-in-string
-        raycaster='far: ${customFields.libVersion}; objects: .clickable'>
+        raycaster='far: ${customFields.libVersion}; objects: .clickable'
+        >
+
+        
+
       </a-camera> 
       
       <a-entity ref={target0} mindar-image-target='targetIndex: 0' id='plantUiLayer'>      
         {targetFound === 0 &&
           <>
-            { modelShow? <a-gltf-model src='#treeOne' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+            { modelShow? <a-gltf-model src='#berries' position='-0.2 -0.5 1' scale='15 15 15' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="1"
@@ -242,7 +257,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       <a-entity ref={target2} mindar-image-target='targetIndex: 2' id='plantUiLayer'>
         {targetFound === 2 &&  
           <>
-          { modelShow? <a-gltf-model src='#treeThree' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+          { modelShow? <a-gltf-model src='#honeysuckle' position='-0.2 -0.3 1' scale='1.3 1.3 1.3' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="3"
@@ -260,7 +275,7 @@ function ArScene({ data, setShowScanningUI, removeMainPanel, setBtnBottomShow })
       <a-entity ref={target3} mindar-image-target='targetIndex: 3' id='plantUiLayer'>
         {targetFound === 3 &&  
           <>
-          { modelShow ? <a-gltf-model src='#treeFour' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+          { modelShow ? <a-gltf-model src='#cranesbill' position='-0.2 -0.5 1' scale='1.5 1.5 1.5' mixin="rotateY"></a-gltf-model> : null }
             <ArIcons
             data={plantData}
             targetIndex="4"
