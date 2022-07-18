@@ -5,7 +5,7 @@ export default function ReflectionPanel({reflectionText, removeReflection}) {
 
     useEffect(() => {
         const audio = new Audio(Meditation);
-        audio.volume = 0.2;
+        audio.volume = 0.1;
         audio.play()
       }, [])
 

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import {React, useState, useEffect, useCallback} from 'react';
 import InfoPanel from './InfoPanel';
-import ReflectionPanel from './ReflectionPanel';
+// import ReflectionPanel from './ReflectionPanel';
 
 // icons
 import { ReactComponent as HeartIcon } from '../assets/icons/heart-solid-black.svg';
@@ -17,7 +17,7 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
   const [smileClick, setSmileClick] = useState(false);
   const [thumbsClick, setThumbsClick] = useState(false);
   const [handClick, setHandClick] = useState(false);
-  const [reflection, setReflection] = useState(false);
+  // const [reflection, setReflection] = useState(false);
 
   const handleHeartClick = useCallback((event) => {
     setIconUIShow(false);
@@ -49,8 +49,21 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     setHandClick(true);
   }, [setIconUIShow, setModelShow]);
 
-  const removeReflection = useCallback(() => {
-    setReflection(false)
+  // const removeReflection = useCallback(() => {
+  //   setReflection(false)
+  //   setIconUIShow(true);
+  //   setModelShow(true);
+  //   setHeartClick(false);
+  //   setEyeClick(false);
+  //   setSmileClick(false);
+  //   setThumbsClick(false);
+  //   setHandClick(false);
+  //   if (droppedTarget) { setShowScanningUI(true) };
+  //   droppedTarget ? setBtnBottomShow(true) : setBtnBottomShow(false);
+  //   }, [droppedTarget, setBtnBottomShow, setIconUIShow, setModelShow, setShowScanningUI]);
+
+  const removePanel = useCallback(() => {
+    // setReflection(true);
     setIconUIShow(true);
     setModelShow(true);
     setHeartClick(false);
@@ -60,16 +73,7 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     setHandClick(false);
     if (droppedTarget) { setShowScanningUI(true) };
     droppedTarget ? setBtnBottomShow(true) : setBtnBottomShow(false);
-    }, [droppedTarget, setBtnBottomShow, setIconUIShow, setModelShow, setShowScanningUI]);
-
-  const removePanel = useCallback(() => {
-    setReflection(true);
-    setHeartClick(false);
-    setEyeClick(false);
-    setSmileClick(false);
-    setThumbsClick(false);
-    setHandClick(false);
-  }, []);
+  }, [droppedTarget, setBtnBottomShow, setIconUIShow, setModelShow, setShowScanningUI]);
 
   // add event listeners to the invisible planes in front of the pathways icons
   useEffect(() => {
@@ -141,11 +145,11 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     : smileClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={5} icon={<SmileIcon/>}/>
     : thumbsClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={6} icon={<ThumbsIcon/>}/>
     : handClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={3} icon={<HandIcon/>}/>
-    : reflection ?
-
-    (<>
-      <ReflectionPanel reflectionText={plantData[targetIndex][8]} removeReflection={removeReflection}/>
-    </>)
+    
+    // : reflection ?
+    // (<>
+    //   <ReflectionPanel reflectionText={plantData[targetIndex][8]} removeReflection={removeReflection}/>
+    // </>)
     
     // fallback solution in case some weird state is encountered
     : setIconUIShow(true)

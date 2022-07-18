@@ -401,3 +401,17 @@
 .team-member p {
   font-size: 12px;
 }
+
+#tap-gesture {
+  position: absolute;
+  bottom: 5vh;
+  right: 0;
+  animation: rotation 3s linear;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(-30deg);
+  }
+}

@@ -6,6 +6,7 @@ import 'aframe';
 import 'mind-ar/src/image-target/aframe.js';
 import './style/App.css';
 import Data from './assets/plant_data.csv';
+import Reflections from './assets/reflection_questions.csv';
 
 // components
 import ArScene from './components/ArScene';
@@ -28,7 +29,8 @@ const ICONS = [
 ];
 
 function App() {
-  const [plantData, setPlantData] = useState(null);
+  const [plantData, setPlantData] = useState([]);
+  const [reflectionData, setReflectionData] = useState([]);
   const [scanningUIShow, setScanningUIShow] = useState(true);
   const [mainPanel, setMainPanel] = useState(0);
   const [btnBottomShow, setBtnBottomShow] = useState(true);
@@ -41,6 +43,18 @@ function App() {
       newline: '\n',
       delimiter: ';',
       complete: (results) => { setPlantData(results.data); }
+      });
+    };
+    handleReadRemoteFile();
+    // eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
+    const handleReadRemoteFile = () => {
+      readRemoteFile(`${Reflections}`, {
+      newline: '\n',
+      delimiter: ';',
+      complete: (results) => { setReflectionData(results.data); }
       });
     };
     handleReadRemoteFile();
@@ -65,6 +79,7 @@ function App() {
         <div className='scene-container'>
           <ArScene
             data={plantData}
+            reflections={reflectionData}
             setShowScanningUI={setScanningUIShow}
             removeMainPanel={removeMainPanel}
             setBtnBottomShow={setBtnBottomShow}
