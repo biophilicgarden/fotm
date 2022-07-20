@@ -11,14 +11,6 @@ import SmileModel from '../assets/models/face.glb'
 import ThumbsModel from '../assets/models/thumbs.glb'
 import HandModel from '../assets/models/hand.glb'
 
-// test assets
-import TreeOne from '../assets/models/tree1.glb'
-import TreeTwo from '../assets/models/tree2.glb'
-import TreeThree from '../assets/models/tree3.glb'
-import TreeFour from '../assets/models/tree4.glb'
-import TreeFive from '../assets/models/tree5.glb'
-import TreeSix from '../assets/models/tree6.glb'
-
 // final assets
 import Berries from '../assets/models/berries_v2.glb'
 import Honeysuckle from '../assets/models/honeysuckle.glb'
@@ -270,13 +262,6 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
         <a-asset-item id="birch" src={Birch}></a-asset-item>
         <a-asset-item id="maidenpink" src={MaidenPink}></a-asset-item>
         <a-asset-item id="campanula" src={Campanula}></a-asset-item>
-
-        <a-asset-item id="treeOne" src={TreeOne}></a-asset-item>
-        <a-asset-item id="treeTwo" src={TreeTwo}></a-asset-item>
-        <a-asset-item id="treeThree" src={TreeThree}></a-asset-item>
-        <a-asset-item id="treeFour" src={TreeFour}></a-asset-item>
-        <a-asset-item id="treeFive" src={TreeFive}></a-asset-item>
-        <a-asset-item id="treeSix" src={TreeSix}></a-asset-item>
       </a-assets>
 
       {/* Define a mixin for the rotation animation */}
