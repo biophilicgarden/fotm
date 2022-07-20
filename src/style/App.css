@@ -421,3 +421,13 @@
     opacity:0;
   }
 }
+
+#tap-gesture-text {
+  position: absolute;
+  bottom: 5vh;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  margin: 0 auto; left: 0; right: 0;
+  text-align: center;
+}

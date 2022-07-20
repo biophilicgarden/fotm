@@ -20,7 +20,7 @@ import TreeFive from '../assets/models/tree5.glb'
 import TreeSix from '../assets/models/tree6.glb'
 
 // final assets
-import Berries from '../assets/models/berries.glb'
+import Berries from '../assets/models/berries_v2.glb'
 import Honeysuckle from '../assets/models/honeysuckle.glb'
 import Cranesbill from '../assets/models/cranesbill.glb'
 import Birch from '../assets/models/birch.glb'
@@ -302,7 +302,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
             <ReflectionPanel reflectionText={reflectionQuestions[randomIndex]} removeReflection={removeReflection}/>
             :
             <a-entity>
-              { modelShow? <a-gltf-model id='berries-model' class='clickable' src='#berries' position='-0.2 -0.5 1' scale='15 15 15' mixin="rotateY"></a-gltf-model> : null }
+              { modelShow? <a-gltf-model id='berries-model' class='clickable' src='#berries' position='-0.2 -0.5 1' scale='1 1 1' mixin="rotateY"></a-gltf-model> : null }
                 <ArIcons
                 data={plantData}
                 targetIndex="1"

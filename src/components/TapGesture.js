@@ -15,6 +15,9 @@ export default function TapGesture( {showGesture, setShowGesture} ) {
     }, [setShowGesture]);
 
     return (
-        <div id="tap-gesture">{showGesture && <Tap/> }</div>
+        <>
+            <div id="tap-gesture">{showGesture && <Tap/> }</div>
+            <div id="tap-gesture-text"><p>Tap the plant or a pathway!</p></div>
+        </>
     );
 }
