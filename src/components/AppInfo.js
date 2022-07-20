@@ -9,12 +9,12 @@ export default function AppInfo({ setMainPanel }) {
             <div className="main-panel-content fade">
                 <span className="main-panel-title">Using this App</span>
                 <div className="main-panel-text">
-                    <p>There are six focal plants dotted around the installation you can interact with via this Augmented Reality app.</p>
-                    <p>To trigger an interaction, point your device at the image displayed near the plant.</p>
+                    <p>There are six focal plants dotted around the installation which you can interact with via this Augmented Reality app.</p>
+                    <p>To trigger an interaction, point your device at the image displayed near the plant, and scan it using your device's camera.</p>
                     <p>An array of 5 icons will be displayed as long as the image is within view of the camera. These represent the 5 Pathways to Nature Connectedness.</p>
-                    <p>Tap these icons to display content related to the plant and the chosen pathway.</p>
-                    <p>Tap the 3D plant model to reflect on your relationship with nature.</p>
-
+                    <p>Tap these icons to display content related to the plant and the chosen Pathway.</p>
+                    <p>Tap the 3D plant model of the plant to reflect on your relationship with nature.</p>
+                    <p>If you accidentally close the app you can scan the QR code to start again.</p>
                     {/* These breaks allows page to be fully scrolled up without faffing around with CSS */}
                     <br></br>   
                     <br></br>

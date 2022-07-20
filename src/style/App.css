@@ -404,7 +404,7 @@
 
 #tap-gesture {
   position: absolute;
-  bottom: 5vh;
+  bottom: 15vh;
   right: 0;
   animation: rotation 3s linear;
   transform-origin: 50% 50%;
