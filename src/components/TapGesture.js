@@ -6,7 +6,7 @@ export default function TapGesture( {showGesture, setShowGesture} ) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowGesture(false);
-        }, 3000);
+        }, 5000);
 
         return () => {
             return () => {clearTimeout(timer);

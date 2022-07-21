@@ -184,22 +184,22 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
 
 
   useEffect(() => {
-    const berriesModel = document.querySelector('#berries-model');
+    const berriesModel = document.querySelector('#berries-plane');
     if (berriesModel) { berriesModel.addEventListener('click', handleModelClick); }
 
-    const birchModel = document.querySelector('#birch-model');
+    const birchModel = document.querySelector('#birch-plane');
     if (birchModel) { birchModel.addEventListener('click', handleModelClick); }
 
-    const honeysuckleModel = document.querySelector('#honeysuckle-model');
+    const honeysuckleModel = document.querySelector('#honeysuckle-plane');
     if (honeysuckleModel) { honeysuckleModel.addEventListener('click', handleModelClick); }
 
-    const cransebillModel = document.querySelector('#cranesbill-model');
+    const cransebillModel = document.querySelector('#cranesbill-plane');
     if (cransebillModel) { cransebillModel.addEventListener('click', handleModelClick); }
 
-    const pinkmaidenModel = document.querySelector('#pinkmaiden-model');
+    const pinkmaidenModel = document.querySelector('#pinkmaiden-plane');
     if (pinkmaidenModel) { pinkmaidenModel.addEventListener('click', handleModelClick); }
 
-    const campanulaModel = document.querySelector('#campanula-model');
+    const campanulaModel = document.querySelector('#campanula-plane');
     if (campanulaModel) { campanulaModel.addEventListener('click', handleModelClick); }
 
     return () => {
@@ -288,6 +288,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
             :
             <a-entity>
               { modelShow? <a-gltf-model id='berries-model' class='clickable' src='#berries' position='-0.2 -0.5 1' scale='1 1 1' mixin="rotateY"></a-gltf-model> : null }
+              <a-plane id='berries-plane' class='clickable' position='-0.2 0 1.3' height="2" scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
                 <ArIcons
                 data={plantData}
                 targetIndex="1"
@@ -313,6 +314,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               :
               <a-entity>
                 { modelShow ? <a-gltf-model id='birch-model' class='clickable' src='#birch' position='-0.2 -0.5 1' scale='0.5 0.5 0.5' mixin="rotateY"></a-gltf-model> : null }
+                  <a-plane id='birch-plane' class='clickable' position='-0.2 0 1.3' height="2" scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
                   <ArIcons
                   data={plantData}
                   targetIndex="2"
@@ -338,6 +340,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               :
               <a-entity>
                 { modelShow? <a-gltf-model id='honeysuckle-model' class='clickable' src='#honeysuckle' position='-0.2 -0.3 1' scale='1.3 1.3 1.3' mixin="rotateY"></a-gltf-model> : null }
+                <a-plane id='honeysuckle-plane' class='clickable' position='-0.2 0 1.3' height="2" scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
                   <ArIcons
                   data={plantData}
                   targetIndex="3"
@@ -363,6 +366,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               :
               <a-entity>
                 { modelShow ? <a-gltf-model id='cranesbill-model' class='clickable' src='#cranesbill' position='-0.2 -0.5 1' scale='1.5 1.5 1.5' mixin="rotateY"></a-gltf-model> : null }
+                <a-plane id='cranesbill-plane' class='clickable' position='-0.2 0 1.3' height="2" scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
                   <ArIcons
                   data={plantData}
                   targetIndex="4"
@@ -388,6 +392,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               :
               <a-entity>
                 { modelShow ? <a-gltf-model id='pinkmaiden-model' class='clickable' src='#maidenpink' position='-0.2 -0.5 1' scale='0.4 0.4 0.4' mixin="rotateY"></a-gltf-model> : null }
+                <a-plane id='pinkmaiden-plane' class='clickable' position='-0.2 0 1.3' height="2" scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
                   <ArIcons
                   data={plantData}
                   targetIndex="5"
@@ -413,6 +418,7 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
               :
               <a-entity>
                 { modelShow? <a-gltf-model id='campanula-model' class='clickable' src='#campanula' position='-0.2 -0.5 1' scale='0.3 0.3 0.3' mixin="rotateY"></a-gltf-model> : null }
+                <a-plane id='campanula-plane' class='clickable' position='-0.2 0 1.3' height="2" scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
                   <ArIcons
                   data={plantData}
                   targetIndex="6"

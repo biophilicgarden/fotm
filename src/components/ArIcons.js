@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import {React, useState, useEffect, useCallback} from 'react';
 import InfoPanel from './InfoPanel';
-// import ReflectionPanel from './ReflectionPanel';
 
 // icons
 import { ReactComponent as HeartIcon } from '../assets/icons/heart-solid-black.svg';
@@ -17,7 +16,6 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
   const [smileClick, setSmileClick] = useState(false);
   const [thumbsClick, setThumbsClick] = useState(false);
   const [handClick, setHandClick] = useState(false);
-  // const [reflection, setReflection] = useState(false);
 
   const handleHeartClick = useCallback((event) => {
     setIconUIShow(false);
@@ -48,19 +46,6 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     setModelShow(false);
     setHandClick(true);
   }, [setIconUIShow, setModelShow]);
-
-  // const removeReflection = useCallback(() => {
-  //   setReflection(false)
-  //   setIconUIShow(true);
-  //   setModelShow(true);
-  //   setHeartClick(false);
-  //   setEyeClick(false);
-  //   setSmileClick(false);
-  //   setThumbsClick(false);
-  //   setHandClick(false);
-  //   if (droppedTarget) { setShowScanningUI(true) };
-  //   droppedTarget ? setBtnBottomShow(true) : setBtnBottomShow(false);
-  //   }, [droppedTarget, setBtnBottomShow, setIconUIShow, setModelShow, setShowScanningUI]);
 
   const removePanel = useCallback(() => {
     // setReflection(true);
@@ -113,28 +98,28 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
       <a-entity>
 
         {/* HEART - COMPASSION */}
-        <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.275 -0.6 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='heart-model' class='clickable' src='#heartModel' position='-1 -0.3 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.275 -0.5 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='heart-model' class='clickable' src='#heartModel' position='-1 -0.3 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='heart-plane' class='clickable' position='-1 -0.3 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* EYE - BEAUTY*/}
-        <a-entity id='text' text={`value: Beauty; color: #FFF`} position='0 0.05 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='eye-model' class='clickable' src='#eyeModel' position='-0.85 0.4 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Beauty; color: #FFF`} position='0 0.15 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='eye-model' class='clickable' src='#eyeModel' position='-0.85 0.4 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='eye-plane' class='clickable' position='-0.85 0.4 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* SMILE - EMOTION */}
-        <a-entity id='text' text={`value: Emotion; color: #FFF`} position='0.63 0.58 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='smile-model' class='clickable' src='#smileModel' position='-0.2 0.9 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Emotion; color: #FFF`} position='0.63 0.68 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='smile-model' class='clickable' src='#smileModel' position='-0.2 0.9 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='smile-plane' class='clickable' position='-0.2 0.9 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* THUMBS - MEANING */}
         <a-entity id='text' text={`value: Meaning; color: #FFF`} position='1.25 0.15 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='thumbs-model' class='clickable' src='#thumbsModel' position='0.45 0.4 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-gltf-model id='thumbs-model' class='clickable' src='#thumbsModel' position='0.45 0.4 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='thumbs-plane' class='clickable' position='0.45 0.4 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* HAND - SENSES */}
-        <a-entity id='text' text={`value: Senses; color: #FFF`} position='1.45 -0.65 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='hand-model' class='clickable' src='#handModel' position='0.6 -0.3 1' scale='13 13 13' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Senses; color: #FFF`} position='1.45 -0.55 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='hand-model' class='clickable' src='#handModel' position='0.6 -0.3 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='hand-plane' class='clickable' position='0.6 -0.3 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
       </a-entity>
@@ -145,11 +130,6 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
     : smileClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={5} icon={<SmileIcon/>}/>
     : thumbsClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={6} icon={<ThumbsIcon/>}/>
     : handClick ? <InfoPanel removePanel={removePanel} data={plantData} targetIndex={targetIndex} col={3} icon={<HandIcon/>}/>
-    
-    // : reflection ?
-    // (<>
-    //   <ReflectionPanel reflectionText={plantData[targetIndex][8]} removeReflection={removeReflection}/>
-    // </>)
     
     // fallback solution in case some weird state is encountered
     : setIconUIShow(true)

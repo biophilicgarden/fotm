@@ -32,7 +32,7 @@ function App() {
   const [plantData, setPlantData] = useState([]);
   const [reflectionData, setReflectionData] = useState([]);
   const [scanningUIShow, setScanningUIShow] = useState(true);
-  const [mainPanel, setMainPanel] = useState(0);
+  const [mainPanel, setMainPanel] = useState(1);
   const [btnBottomShow, setBtnBottomShow] = useState(true);
 
   // parse csv file
