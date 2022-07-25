@@ -403,11 +403,11 @@
   position: absolute;
   bottom: 20vh;
   right: 0;
-  animation: rotation 5s linear;
-  transform-origin: 50% 50%;
+  /* animation: rotation 5s linear;
+  transform-origin: 50% 50%; */
 }
 
-@keyframes rotation {
+/* @keyframes rotation {
   to {
     transform: rotate(-30deg) translateX(-25px) translateY(-50px);
   }
@@ -417,7 +417,7 @@
   100% {
     opacity:0;
   }
-}
+} */
 
 #tap-gesture-text {
   position: absolute;

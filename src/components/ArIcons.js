@@ -98,23 +98,23 @@ export default function ArIcons({data, targetIndex, iconUIShow, setIconUIShow, s
       <a-entity>
 
         {/* HEART - COMPASSION */}
-        <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.275 -0.5 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='heart-model' class='clickable' src='#heartModel' position='-1 -0.3 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
+        <a-entity id='text' text={`value: Compassion; color: #FFF`} position='-0.275 -0.55 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-gltf-model id='heart-model' class='clickable' src='#heartModel' position='-1 -0.32 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='heart-plane' class='clickable' position='-1 -0.3 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* EYE - BEAUTY*/}
         <a-entity id='text' text={`value: Beauty; color: #FFF`} position='0 0.15 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='eye-model' class='clickable' src='#eyeModel' position='-0.85 0.4 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
+        <a-gltf-model id='eye-model' class='clickable' src='#eyeModel' position='-0.85 0.4 1' scale='7.5 7.5 7.5' rotation='90 0 0'></a-gltf-model>
         <a-plane id='eye-plane' class='clickable' position='-0.85 0.4 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* SMILE - EMOTION */}
-        <a-entity id='text' text={`value: Emotion; color: #FFF`} position='0.63 0.68 1' scale='2 2 2' wireframe='true'></a-entity>
+        <a-entity id='text' text={`value: Emotion; color: #FFF`} position='0.63 0.65 1' scale='2 2 2' wireframe='true'></a-entity>
         <a-gltf-model id='smile-model' class='clickable' src='#smileModel' position='-0.2 0.9 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='smile-plane' class='clickable' position='-0.2 0.9 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* THUMBS - MEANING */}
         <a-entity id='text' text={`value: Meaning; color: #FFF`} position='1.25 0.15 1' scale='2 2 2' wireframe='true'></a-entity>
-        <a-gltf-model id='thumbs-model' class='clickable' src='#thumbsModel' position='0.45 0.4 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
+        <a-gltf-model id='thumbs-model' class='clickable' src='#thumbsModel' position='0.48 0.35 1' scale='8 8 8' rotation='90 0 0'></a-gltf-model>
         <a-plane id='thumbs-plane' class='clickable' position='0.45 0.4 1.1' scale='0.5 0.5 0.5' rotation='0 0 0' visible="false"></a-plane>
 
         {/* HAND - SENSES */}
