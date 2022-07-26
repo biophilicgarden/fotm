@@ -225,7 +225,6 @@ function ArScene({ data, reflections, setShowScanningUI, removeMainPanel, setBtn
     if (reflections !== null) {
       setReflectionQuestions(reflections);
       setRandomIndex(Math.floor(Math.random() * (reflections.length - 1)) + 1);
-      setRandomIndex(25);
     }
   }, [reflections, targetFound])
 
